@@ -15,7 +15,7 @@
 
 let http = require('http')
 
-let bodyColor = (process.env.TBN_COLOR || '31A024') + '\n'
+let bodyColor = (process.env.TBN_COLOR || '31A023') + '\n'
 let name = (process.env.TBN_NAME || 'unknown').toLowerCase()
 
 // Box-Muller transform of uniformly distributed random numbers to
