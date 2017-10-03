@@ -66,14 +66,9 @@ let handleRequest = (request, response) => {
   let delay = 0
   let errorRate = 0
 
-  if (name !== 'unknown') {
-    let meanDelay = Number(request.headers['x-' + name + '-delay'] || '0')
-    if (meanDelay > 0) {
-      delay = getDelay(meanDelay)
-    }
-
-    errorRate = Number(request.headers['x-' + name + '-error'] || '0')
-  }
+  let meanDelay = 250
+  delay = getDelay(meanDelay)
+  errorRate = 0.3
 
   let fail = errorRate > 0 && Math.random() < errorRate
 
